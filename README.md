@@ -9,7 +9,7 @@
 1. 阅读[入门基础](docs/getting-started.md)，理解文件格式、汇编、调用约定和静态/动态分析。
 2. 按[标准分析流程](docs/workflow.md)建立隔离环境、留存样本哈希并记录证据。
 3. 从[工具索引](docs/tools.md)按目标平台挑选最小工具集。
-4. 查看对应专题：[原生程序](docs/native.md)、[Android](docs/android.md)、[.NET 与 Unity](docs/dotnet-unity.md)。
+4. 查看对应专题：[原生程序](docs/native.md)、[Android](docs/android.md)、[.NET 与 Unity](docs/dotnet-unity.md)、[协议与网络](docs/protocol.md)、[固件与嵌入式](docs/firmware.md)。
 5. 分析时配合[检查表与速查](docs/checklist.md)。
 
 ## 推荐的最小工具集
@@ -37,6 +37,8 @@ docs/
 ├── native.md            # Windows/Linux/macOS 原生程序
 ├── android.md           # APK、DEX、资源与运行时分析
 ├── dotnet-unity.md      # 托管程序集与 Unity
+├── protocol.md          # 流量捕获、TLS 与协议重建
+├── firmware.md          # 固件解包、静态分析与仿真
 └── checklist.md         # 分析记录模板和命令速查
 ```
 

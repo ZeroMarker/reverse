@@ -27,8 +27,8 @@
 | 工具 | 适用场景 | 官方资源 |
 | --- | --- | --- |
 | Frida | 跨平台进程插桩，移动端尤其常用 | [文档](https://frida.re/docs/home/) |
-| strace | Linux 系统调用与信号跟踪 | [手册](https://strace.io/) |
-| ltrace | Linux 动态库调用跟踪 | [项目](https://gitlab.com/cespedes/ltrace) |
+| strace | Linux 系统调用与信号跟踪 | [官网](https://strace.io/) |
+| ltrace | Linux 动态库调用跟踪；维护缓慢，结果建议用 GDB 在 PLT 处设断交叉验证 | [项目](https://gitlab.com/cespedes/ltrace) |
 | Process Monitor | Windows 文件、注册表、进程/线程活动 | [Sysinternals](https://learn.microsoft.com/sysinternals/downloads/procmon) |
 | Process Explorer | Windows 进程、句柄和 DLL 检查 | [Sysinternals](https://learn.microsoft.com/sysinternals/downloads/process-explorer) |
 
@@ -68,4 +68,6 @@ TLS 拦截需要控制客户端信任或测试证书。不要在未获授权的�
 - **Linux 命令行程序**：Ghidra + GDB/pwndbg + strace。
 - **Android APK**：JADX 看代码，Apktool 看资源/smali，ADB 看运行状态，必要时使用 Frida 验证。
 - **.NET/Unity**：先用 ILSpy；需要运行时调试或程序集编辑时再考虑 dnSpyEx。
+- **协议与网络**：Wireshark/tshark 看流量，mitmproxy 查看 TLS 明文（需控制信任），Kaitai 固化解析器。
+- **固件与嵌入式**：binwalk 解包，ImHex 查看结构，Ghidra 按架构分析，QEMU 验证行为。
 - **大规模自动化**：优先选择有稳定 CLI/API 的 radare2、Ghidra headless、JADX CLI、YARA 与自编脚本。

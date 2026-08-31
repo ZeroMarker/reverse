@@ -18,12 +18,13 @@
 
 ## 判断是否为托管程序集
 
-可检查 PE 的 CLR/CLI 数据目录，或使用：
+可检查 PE 的 CLR/CLI 数据目录，或使用 `file`：
 
 ```bash
 file target.exe
-dotnet --info
 ```
+
+托管程序集的输出中通常带有 `Mono/.Net assembly` 标记。注意 `file` 只读取文件头，单文件打包或 NativeAOT 的结果可能显示为普通 PE，需要结合导入表或 CLR 数据目录进一步确认。
 
 如果 ILSpy 无法正常解析，不要立即认定文件损坏；它可能是原生程序、单文件打包、NativeAOT、混淆结果或只包含本地启动器。
 

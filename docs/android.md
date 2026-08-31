@@ -53,7 +53,7 @@ Frida 适合验证运行时参数、返回值和调用路径。应先从静态�
 ```bash
 apktool b decoded -o rebuilt.apk
 zipalign -p 4 rebuilt.apk aligned.apk
-apksigner sign --ks test-keystore.jks aligned.apk
+apksigner sign --ks test-keystore.jks aligned.apk  # 未指定 --ks-pass 时会交互式提示输入密钥库口令
 apksigner verify --verbose aligned.apk
 ```
 
